@@ -33,18 +33,6 @@ router.get('/:id', function (req, res) {
   })
 })
 router.get('/:id/new', function (req, res) {
-  // Chef.findById({_id: req.params.id}, function (err, chef) {
-  //   Recipe.find({
-  //     chef_id: chef._id
-  //   })
-  //   .populate('chef_id')
-  //   .exec(function (err, allRecipes) {
-  //     res.render('newrecipe', {
-  //       chef: chef,
-  //       allRecipes: allRecipes
-  //     })
-  //   })
-  // })
   Chef.findById({_id: req.params.id}, function (err, chef) {
     res.render('newrecipe', {
       chef: chef
@@ -68,33 +56,6 @@ router.post('/:id/new', function (req, res) {
     })
   })
 })
-// router.get('/:id/edit', function (req, res) {
-//   Chef.findById({_id: req.params.id}, function (err, chef) {
-//     Recipe.findById(req.params.id)
-//     .populate('chef_id')
-//     .exec(function (err, recipe) {
-//       res.render('editrecipe', {
-//         chef: chef,
-//         recipe: recipe
-//       })
-//     })
-//   })
-//   Chef.findById({_id: req.params.id}, function (err, chef) {
-//     Recipe.find({
-//       chef_id: chef._id
-//     })
-//     .populate('chef_id')
-//     .exec(function (err, allRecipes) {
-//       res.render('editrecipe', {
-//         chef: chef,
-//         recipe: recipe
-//       })
-//     })
-//   })
-// })
-// router.post('/:id/edit', function (req, res) {
-//
-// })
 router.delete('/:id', function (req, res) {
   console.log(req.user.chef)
   Recipe.find({}, function (err, chef) {

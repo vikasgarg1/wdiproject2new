@@ -8,7 +8,6 @@ var Recipe = require('../models/recipe')
 // Go to chefs page
 router.get('/', function (req, res) {
  Chef.find({}).populate('user').exec( function (err, allChefs) {
-  // Chef.find({user: req.user._id}, function (err, allChefs) {
     res.render('chef', {
       allChefs: allChefs
     })
