@@ -1,0 +1,27 @@
+<% include ./partials/header.ejs %>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><strong>KYURETA</strong></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/user">Home</a></li>
+      <li><a href="/user/chef">Chefs</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <h1>Welcome!</h1>
+    <% if(message.length > 0) { %>
+      <div class="alert alert-success">
+      <%= message %>
+      </div>
+      <% } %>
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>

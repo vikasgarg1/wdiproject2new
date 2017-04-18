@@ -1,0 +1,59 @@
+<% include ./partials/header.ejs %>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><strong>KYURETA</strong></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/user">Home</a></li>
+      <li><a href="/user/chef">Chefs</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <h2><strong>Recipes</strong></h2>
+  </div>
+  <div class="row table-responsive">
+    <table class="table table-striped">
+      <thead class="thead-default">
+        <tr>
+          <th>Recipe Name</th>
+          <th>Main Ingredient</th>
+          <th>Composition</th>
+          <th>Prep Time</th>
+          <th>Difficulty</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% allRecipes.forEach(function(recipe) { %>
+          <% var ds = new Date(recipe.date_rented)%>
+          <% var ddmmyy = ds.getDate() + "-" + ds.getMonth() + "-" + ds.getFullYear() %>
+          <% %>
+          <tr>
+          <td><%= recipe.recipe_name %></td>
+          <td><%= recipe.main_ingredient %></td>
+          <td><%= recipe.composition %></td>
+          <td><%= recipe.prep_time %></td>
+          <td><%= recipe.difficulty %></td>
+          <td><form method="GET" action="/user/chef/<%=chef._id%>/recipe/<%=recipe._id%>/edit">
+          <button type="submit" class="btn btn-warning btn-large">Edit</button>
+          </form></td>
+          <td><form method="POST" action="/user/chef/<%=chef._id%>/recipe/<%=recipe._id%>?_method=DELETE">
+          <button type="submit" class="btn btn-danger btn-large">Delete</button>
+          </form></td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <a class="btn btn-success btn-large" href="/user/chef/<%=chef._id%>/recipe/new" role="button">Add New Recipe</a>
+  </div>
+</div>
+<% include ./partials/footer.ejs %>

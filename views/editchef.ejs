@@ -1,0 +1,40 @@
+
+<% include ./partials/header.ejs %>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><strong>KYURETA</strong></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/user">Home</a></li>
+      <li><a href="/user/chef">Chefs</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <h2><strong>Edit Chef</strong></h2>
+  </div>
+  <div class="row">
+    <form action="/user/chef/<%=chef._id%>/edit?_method=PUT" method="post" data-parsley-validate>
+      <div class="form-group">
+        <label for="InputChef">Edit Chef</label>
+        <input type="text" class="form-control" id="InputChef" name="chef[chef_name]" placeholder="Chef Name" value="<%=chef.name%>">
+      </div>
+      <div class="form-group">
+        <label for="InputCuisine">Edit Cuisine</label>
+        <input type="text" class="form-control" id="InputCuisine" name="chef[cuisine]" placeholder="Cuisine" value="<%=chef.cuisine%>">
+      </div>
+      <div class="form-group">
+        <label for="InputRestaurant">Edit Restaurant</label>
+        <input type="text" class="form-control" id="InputRestaurant" name="chef[restaurant]" placeholder="Restaurant" value="<%=chef.restaurant%>">
+      </div>
+      <button type="submit" class="btn btn-default btn-primary">Save</button>
+    </form>
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>

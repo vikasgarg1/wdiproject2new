@@ -1,0 +1,47 @@
+<% include ./partials/header.ejs %>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><strong>KYURETA</strong></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/user">Home</a></li>
+      <li><a href="/user/chef">Chefs</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <h2><strong>Edit Recipe</strong></h2>
+  </div>
+  <div class="row">
+    <form action="/user/chef/<%=chef._id%>/recipe/<%=recipe._id%>/edit?_method=PUT" method="post" data-parsley-validate>
+      <div class="form-group">
+        <label for="InputRecipeName">Recipe Name</label>
+        <input type="text" class="form-control" id="InputRecipeName" name="recipe[recipe_name]" placeholder="Recipe Name" value="<%=recipe.recipe_name%>">
+      </div>
+      <div class="form-group">
+        <label for="InputMainIngredient">Main Ingredient</label>
+        <input type="text" class="form-control" id="InputMainIngredient" name="recipe[main_ingredient]" placeholder="Main Ingredient" value="<%=recipe.main_ingredient%>">
+      </div>
+      <div class="form-group">
+        <label for="InputComposition">Composition</label>
+        <input type="text" class="form-control" id="InputComposition" name="recipe[composition]" placeholder="Composition" value="<%=recipe.composition%>">
+      </div>
+      <div class="form-group">
+        <label for="InputPrepTime">Prep Time</label>
+        <input type="text" class="form-control" id="InputPrepTime" name="recipe[prep_time]" placeholder="Prep Time" value="<%=recipe.prep_time%>">
+      </div>
+      <div class="form-group">
+        <label for="InputDifficulty">Difficulty (Easy/Hard)</label>
+        <input type="text" class="form-control" id="InputDifficulty" name="recipe[difficulty]" placeholder="Difficulty" value="<%=recipe.difficulty%>">
+      </div>
+      <button type="submit" class="btn btn-default btn-primary">Save</button>
+    </form>
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>
