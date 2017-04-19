@@ -41,6 +41,7 @@
           <td><%= recipe.composition %></td>
           <td><%= recipe.prep_time %></td>
           <td><%= recipe.difficulty %></td>
+
           <% if (recipe.user_id._id.toString() == currentUser._id.toString()) { %>
           <td><form method="GET" action="/user/chef/<%=chef._id%>/recipe/<%=recipe._id%>/edit">
           <button type="submit" class="btn btn-warning btn-large">Edit</button>
