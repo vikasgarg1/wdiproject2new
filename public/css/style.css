@@ -1,4 +1,4 @@
 // create style here and then require in the layout.
-/*body {
-  background-image: url(https://munchies-images.vice.com/wp_upload/5526421058_fa02f07dae_b.jpg);
-}*/
+body {
+  background-image: url("../images/kitchen.jpg");
+}
