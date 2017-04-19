@@ -23,7 +23,7 @@
         <tr>
           <th>Chef Name</th>
           <th>Cuisine</th>
-          <th>Restaurant</th>
+          <th>Flagship Restaurant & Location</th>
           <th></th>
           <th></th>
           <th></th>
@@ -35,7 +35,7 @@
             <td><%= chef.name %></td>
             <td><%= chef.cuisine %></td>
             <td><%= chef.restaurant %></td>
-            <td><a class="btn btn-primary btn-large" href="/user/chef/<%=chef._id%>/recipe" role="button">View recipes</a></td>
+            <td><a class="btn btn-primary btn-large" href="/user/chef/<%=chef._id%>/recipe" role="button">View Recipes</a></td>
 
             <% if (chef.user.id == currentUser._id) { %>
             <td><form method="GET" action="/user/chef/<%=chef._id%>/edit">
@@ -51,7 +51,7 @@
     </table>
   </div>
   <div class="row">
-    <a class="btn btn-success btn-large" href="/user/chef/new" role="button">Add new chef</a>
+    <a class="btn btn-success btn-large" href="/user/chef/new" role="button">Add New Chef</a>
   </div>
 </div>
 

@@ -1,3 +1,8 @@
 html {
-  background-image: url("../images/kitchen.jpg")
+  background-image: url("../images/kitchen.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.row {
+  padding-bottom: 10px;
 }

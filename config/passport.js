@@ -48,7 +48,7 @@ module.exports = function (passport) {
         foundUser.authenticate(password, function (err, authenticated) {
           if (err) return done(err)
           if (authenticated) {
-            return done(null, foundUser, req.flash('profileMessage', 'You have logged in!'))
+            return done(null, foundUser, req.flash('profileMessage', 'You have logged in, please contribute chefs and recipes!'))
           } else {
             return done(null, false, req.flash('loginMessage', 'Wrong password! Please type your password again!'))
           }

@@ -10,6 +10,7 @@ router.get('/', function (req, res) {
       chef_id: chef._id
     })
     .populate('chef_id')
+    .populate('user_id')
     .exec(function (err, allRecipes) {
       res.render('recipe', {
         chef: chef,
