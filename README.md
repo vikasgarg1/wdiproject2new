@@ -5,7 +5,7 @@
 For my WDI Project 2 I wanted to create and deploy a website that demystifies, and simplifies, the art of cooking! Some of the world's most famous chefs serve dishes in their flagship restaurants that are often very simple and often the most popular items on their menus. With just a few ingredients and a little effort, these dishes can be prepared in less than 30 minutes!
 
 # **The Site**
-[KYURETA](https://dry-citadel-50559.herokuapp.com/user)
+[KYURETA](https://dry-citadel-50559.herokuapp.com)
 
 Pick something that you like and try making it! Better yet, share some recipes from your favorite chefs from around the world!
 
