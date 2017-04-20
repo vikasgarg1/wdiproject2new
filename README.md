@@ -25,7 +25,7 @@ Finding recipes is as easy as searching [Google](https://www.google.com) for rec
 ## **Languages & Applications**
 - HTML
 - CSS
-- Javascript
+- Javascript using Node.js framework
 - Integration with mLab, a cloud-based database
 - Deployment on Heroku
 
