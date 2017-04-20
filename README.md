@@ -25,7 +25,7 @@ Finding recipes is as easy as searching [Google](https://www.google.com) for rec
 ## **Entity Relationship Diagram**
 In the ERD below, pages are illustrated using ellipses and navigation buttons using rectangles.
 
-![alt tag](https://github.com/vikasgarg1/wdiproject2new/blob/master/Untitled%20Diagram.jpg?raw=true)
+![alt tag](https://github.com/vikasgarg1/wdiproject2new/blob/master/ERD.jpg?raw=true)
 
 ## **Languages & Applications**
 - HTML
