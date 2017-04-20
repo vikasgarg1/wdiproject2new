@@ -47,6 +47,7 @@ router.post('/:id/new', function (req, res) {
       composition: req.body.recipe.composition,
       prep_time: req.body.recipe.prep_time,
       difficulty: req.body.recipe.difficulty,
+      recipe_text: req.body.recipe.recipe_text,
       chef_id: req.params.id,
       user_id: req.user._id
     })

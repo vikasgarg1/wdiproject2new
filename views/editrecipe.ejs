@@ -39,6 +39,10 @@
         <label for="InputDifficulty">Difficulty (easy recipes please!)</label>
         <input type="text" class="form-control" id="InputDifficulty" name="recipe[difficulty]" placeholder="Difficulty" value="<%=recipe.difficulty%>">
       </div>
+      <div class="form-group">
+        <label for="InputRecipeText">Recipe Details</label>
+        <input type="text" class="form-control" id="InputRecipeText" name="recipe[recipe_text]" placeholder="Recipe Details" value="<%=recipe.recipe_text%>">
+      </div>
       <button type="submit" class="btn btn-default btn-primary">Save</button>
     </form>
   </div>

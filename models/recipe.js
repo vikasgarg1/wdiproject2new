@@ -23,6 +23,10 @@ var recipeSchema = new Schema({
     type: String,
     required: true
   },
+  recipe_text: {
+    type: String,
+    required: true
+  },
   chef_id: {
     type: Schema.Types.ObjectId,
     ref: 'Chef'
