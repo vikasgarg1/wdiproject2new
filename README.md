@@ -23,6 +23,8 @@ Finding recipes is as easy as searching [Google](https://www.google.com) for rec
 3. Users can edit or delete chefs and recipes they've created however they cannot edit or delete entries other users have created.
 
 ## **Entity Relationship Diagram**
+In the ERD below, pages are illustrated using ellipses and navigation buttons using rectangles.
+
 ![alt tag](https://github.com/vikasgarg1/wdiproject2new/blob/master/Untitled%20Diagram.jpg?raw=true)
 
 ## **Languages & Applications**
